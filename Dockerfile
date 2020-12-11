@@ -15,7 +15,7 @@ COPY main.go main.go
 COPY api/ api/
 COPY controllers/ controllers/
 
-COPY yamlutil/ yamlutil/
+COPY pkg/ pkg/
 COPY vendor/ vendor/
 
 

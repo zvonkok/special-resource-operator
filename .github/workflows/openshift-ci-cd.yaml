@@ -1,6 +1,5 @@
 name: OpenShift - Tests
 
-
 env:
   REGISTRY: quay.io/openshift-psap
   REGISTRY_USER: ${{ secrets.QUAY_USERNAME }}
@@ -8,8 +7,6 @@ env:
 
   OPENSHIFT_SERVER: ${{ secrets.OPENSHIFT_SERVER }}
   OPENSHIFT_TOKEN: ${{ secrets.OPENSHIFT_TOKEN }}
-
-
 
 on: push
 
@@ -41,7 +38,6 @@ jobs:
         cat > ~/.docker/config.json <<'EOF'
         ${{ secrets.AUTH_JSON }}
         EOF
-#mkdir ~/.docker && echo "${{ secrets.AUTH_JSON }}" > ~/.docker/config.json
     
     - name: make local-image-push
       run: make local-image-push
@@ -56,12 +52,6 @@ jobs:
 
     - name: make undeploy
       run: make undeploy
-
-    - name: make deploy
-      run: make deploy
-
-    - name: oc get clusteroperator special-resource-operator
-      run: oc get clusteroperator special-resource-operator
 
     - name: make test-e2e
       run: make test-e2e

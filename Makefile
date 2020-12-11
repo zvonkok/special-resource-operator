@@ -15,6 +15,8 @@ unit:
 	@echo "TODO UNIT TEST"
 
 test-e2e:
+	go run test/deploy/deploy.go -path ./manifests
+
 	for d in basic; do \
 	  KUBERNETES_CONFIG="$(KUBECONFIG)" go test -v -timeout 40m ./test/e2e/$$d -ginkgo.v -ginkgo.noColor -ginkgo.failFast || exit; \
 	done
