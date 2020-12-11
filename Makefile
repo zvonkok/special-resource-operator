@@ -15,17 +15,21 @@ unit:
 	@echo "TODO UNIT TEST"
 
 test-e2e:
-	go run test/manifests/deploy.go -path ./manifests
+	go run test/deploy/deploy.go -path ./manifests
 
 	for d in basic; do \
 	  KUBERNETES_CONFIG="$(KUBECONFIG)" go test -v -timeout 40m ./test/e2e/$$d -ginkgo.v -ginkgo.noColor -ginkgo.failFast || exit; \
 	done
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	go run test/undeploy/undeploy.go -path ./manifests
 =======
 	go run test/manifests/undeploy.go -path ./manifests
 >>>>>>> 9aa1b5c... Added deploy and undeploy function and some SRO restructuring
+=======
+	go run test/deploy/undeploy.go -path ./manifests
+>>>>>>> 64c7675... Fixed Typo
 
 # Current Operator version
 VERSION ?= v0.0.1
