@@ -23,6 +23,7 @@ test-e2e:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	go run test/undeploy/undeploy.go -path ./manifests
 =======
 	go run test/manifests/undeploy.go -path ./manifests
@@ -30,6 +31,9 @@ test-e2e:
 =======
 	go run test/deploy/undeploy.go -path ./manifests
 >>>>>>> 64c7675... Fixed Typo
+=======
+	go run test/undeploy/undeploy.go -path ./manifests
+>>>>>>> 70f85f0... Fixed another typo
 
 # Current Operator version
 VERSION ?= v0.0.1
