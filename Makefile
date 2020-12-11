@@ -21,7 +21,7 @@ test-e2e:
 	  KUBERNETES_CONFIG="$(KUBECONFIG)" go test -v -timeout 40m ./test/e2e/$$d -ginkgo.v -ginkgo.noColor -ginkgo.failFast || exit; \
 	done
 
-	go run test/deploy/undeploy.go -path ./manifests
+	go run test/undeploy/undeploy.go -path ./manifests
 
 # Current Operator version
 VERSION ?= v0.0.1
