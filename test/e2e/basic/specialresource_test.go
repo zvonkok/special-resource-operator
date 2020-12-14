@@ -5,12 +5,11 @@ import (
 
 	"github.com/onsi/ginkgo"
 	"github.com/onsi/gomega"
-
-	"github.com/openshift-psap/special-resource-operator/test/framework"
 )
 
 var (
-	cs = framework.NewClientSet()
+// TODO: linter complaining remove until we have e2e tests.
+//cs = framework.NewClientSet()
 )
 
 func TestSRO(t *testing.T) {

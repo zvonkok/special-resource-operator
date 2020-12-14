@@ -23,7 +23,8 @@ var (
 	// LightGray color
 	LightGray = Color("\033[1;37m%s\033[0m")
 
-	color = []ShellColor{Green, Blue, Brown, Purple, Cyan}
+	// TODO: Alternate between specialresources
+	// color = []ShellColor{Green, Blue, Brown, Purple, Cyan}
 )
 
 // Color colours the string according to provide ShellColor
